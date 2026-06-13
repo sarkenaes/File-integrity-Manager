@@ -22,9 +22,3 @@ while((bytes_read=fread(buff,1,4096,fp))>0){
 fclose(fp);
 return 0;
 }
-int main() {
-    char out_hex[65];
-    int result = hash_file("/etc/hostname", out_hex, sizeof(out_hex));
-    printf("HASH: %s\n", out_hex);
-    return 0;
-}

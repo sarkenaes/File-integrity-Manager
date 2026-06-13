@@ -1,4 +1,5 @@
 #include <sqlite3.h>
+#include <stdio.h>
 int db_init(){
     sqlite3 *db;
     if (sqlite3_open("fim.db", &db) != SQLITE_OK)
@@ -9,7 +10,7 @@ return 0;
 }
 int db_store(const char *filepath,const  char *hash ){
 sqlite3 *db;
-sqlite3-smt *stmt; 
+sqlite3_stmt *stmt; 
 if(sqlite3_open("fim.db",&db)!=SQLITE_OK){
     return -1;
 }
