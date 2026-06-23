@@ -27,8 +27,7 @@ char out_hex[65];
 
 db_get(filepath, out_hash, sizeof(out_hash));
 hash_file(filepath,out_hex,sizeof(out_hex));
-if(strcmp(out_hash,out_hex)==0){
-    printf("The file hasn't been altered\n");
-}else{
-    printf("The file has been altered\n");
-}}}
+if(strcmp(out_hash,out_hex)!=0){
+    printf(" [ALERT]  %s has been modified!\n", filepath);
+}
+}}
